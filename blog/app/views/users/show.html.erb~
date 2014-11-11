@@ -1,0 +1,3 @@
+<%= @user.email %><br/>
+<%= current_user.name %>
+<%= session[:current_user_id]  %>

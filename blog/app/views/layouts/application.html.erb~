@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+	 <div>
+		<% if flash[:notice] %>
+		<%= flash[:notice] %></p>
+		<% end %>
+	</div>
+</head>
+<body>
+<a href="home">Home</a>&nbsp;<a href="aboutus">About Us</a>&nbsp;<a href="contactus">Contact Us</a>&nbsp;<a href="signin">Sign In</a>&nbsp;<a href="signup">Sign Up</a>
+<p><%= link_to "Log Out", signout_path, :method=>'delete' %></p>
+ 
+<%= yield %>
+
+</body>
+</html>

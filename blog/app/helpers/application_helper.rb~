@@ -1,0 +1,5 @@
+module ApplicationHelper
+ def login_required
+   redirect_to signin_path, :notice => 'Login required!' unless signed_in?
+ end
+end
