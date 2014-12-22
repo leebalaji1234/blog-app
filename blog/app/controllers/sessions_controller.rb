@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 	user = User.find_by_email(params[:session][:email])
 # abort "Nosdfsdfsdf matches found : #{user}"
 # comment addede
+# siva 
 		if user
 			if user.password == params[:session][:password]
 				session[:current_user_id]= user.id
